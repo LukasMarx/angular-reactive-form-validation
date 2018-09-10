@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { phoneNumberValidator } from '../validators/phone-validator';
-import { emailValidator } from '../validators/email-validator';
 
 @Component({
   selector: 'app-contact',
@@ -21,7 +20,7 @@ export class ContactComponent implements OnInit {
 
   createFormGroup() {
     return new FormGroup({
-      email: new FormControl('', [Validators.required, emailValidator]),
+      email: new FormControl('', [Validators.required, Validators.email]),
       mobile: new FormControl('', [Validators.required, phoneNumberValidator]),
       country: new FormControl('', [Validators.required])
     });
