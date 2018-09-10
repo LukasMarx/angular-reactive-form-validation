@@ -1,0 +1,8 @@
+.ng-valid,
+.ng-valid.required {
+  background-color: lightgreen;
+}
+
+.ng-invalid:not(form) {
+  background-color: lightcoral;
+}
